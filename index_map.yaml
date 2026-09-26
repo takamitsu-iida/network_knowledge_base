@@ -1,0 +1,22 @@
+---
+version: 1.0
+
+domains:
+  evpn_vxlan:
+    description: "データセンターにおけるオーバーレイネットワーク（EVPN-VXLAN）"
+    priority: high
+    paths:
+      - base: "01_network_domains/evpn_vxlan/00_concepts"
+        type: concept
+      - base: "01_network_domains/evpn_vxlan/01_implementations"
+        type: implementation
+    # AIが検索時に考慮すべきキーワード
+    keywords:
+      - VXLAN
+      - MP-BGP
+      - L2VNI
+      - L3VNI
+      - VTEP
+    # 依存する別のドメイン（検索時の関連度向上用）
+    dependencies:
+      - routing_protocols # EVPNのアンダーレイとしてOSPF/BGPが必要
